@@ -24,7 +24,8 @@ def download_file(url, path):
     if not os.path.exists(floder):
         os.makedirs(floder)
     print(url)
-    res = requests.get(url,proxies=proxies)
+    # res = requests.get(url,proxies=proxies)
+    res = requests.get(url)
     if path in downloaded:
         return None
     if res.status_code == 200:
